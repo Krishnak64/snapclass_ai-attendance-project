@@ -22,7 +22,7 @@ def style_background_home():
 
 
 
-def style_background_deshboard():
+def style_background_dashboard():
     
     st.markdown("""
                 
