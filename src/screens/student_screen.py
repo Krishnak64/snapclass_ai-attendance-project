@@ -10,6 +10,7 @@ from src.pipelines.voice_pipeline import get_voice_embedding
 from src.database.db import get_all_students, create_student
 import time
 
+
 def student_dashboard():
     st.header("Dashboard header")
 
