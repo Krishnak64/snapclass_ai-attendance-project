@@ -1,3 +1,5 @@
+streamlit
+
 # Utilities
 numpy
 pandas
@@ -18,7 +20,6 @@ segno
 # use for image processing
 pillow
 
-streamlit
 
 librosa
 resemblyzer
