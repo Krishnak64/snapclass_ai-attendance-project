@@ -106,6 +106,40 @@ snapclass/
 
 ---
 
+🏗️ System Architecture Flow: 
+
+                    ┌─────────────────────┐
+                    │   Streamlit UI      │
+                    │ (Admin Dashboard)    │
+                    └─────────┬───────────┘
+                              │
+        ┌─────────────────────┼─────────────────────┐
+        │                     │                     │
+        ▼                     ▼                     ▼
+
+┌──────────────┐   ┌──────────────────┐   ┌──────────────────┐
+│ Face Module   │   │ Voice Module     │   │ QR Module        │
+│ dlib + ML     │   │ librosa + AI     │   │ segno generator  │
+│ face vectors  │   │ speaker ID       │   │                  │
+└──────┬───────┘   └────────┬─────────┘   └────────┬─────────┘
+       │                    │                      │
+       └────────────┬───────┴──────────────┬──────┘
+                    ▼                      ▼
+        ┌────────────────────────────────────────┐
+        │     AI Matching Engine (scikit-learn)  │
+        │   Face + Voice + QR Identity Fusion    │
+        └──────────────────┬─────────────────────┘
+                           ▼
+        ┌────────────────────────────────────────┐
+        │        Backend (Supabase Cloud)        │
+        │       Users | Attendance | Logs        │
+        └────────────────────────────────────────┘
+
+                           ▼
+        ┌────────────────────────────────────────┐
+        │   Security Layer (bcrypt authentication)│
+        └────────────────────────────────────────┘
+
 ## ⚙️ Installation
 
 ### 1️⃣ Clone Repository
